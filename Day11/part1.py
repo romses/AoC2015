@@ -10,6 +10,8 @@ def increase(password,position=-1):
     mid=ord(mid)+1
     if mid ==105 or mid == 108 or mid == 111:
         mid+=1
+        right="a"*len(right)
+
     if mid > 122:
         mid=mid-26
         return increase(left+chr(mid)+right,position-1)
